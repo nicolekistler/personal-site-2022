@@ -13,7 +13,6 @@ const Wrapper = styled.section`
 
 const InnerWrapper = styled.div`
     display: flex;
-    background-color: blue;
     flex-direction: column;
     justify-content: center;
     margin-left: 5%;

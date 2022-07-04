@@ -1,60 +1,71 @@
 import React, { memo } from 'react';
 import styled from 'styled-components';
-import { Description, SectionTitle } from '../../styles/typography';
 import { colors } from '../../styles/colors';
+import { Description, SectionTitle } from '../../styles/typography';
 
-const Wrapper = styled.section`
+const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50%;
+    max-width: 70%;
     margin: auto;
-`;
-
-const InnerWrapper = styled.div`
-    display: flex;
-`;
-
-const Portrait = styled.div`
-    width: 500px;
-    height: 175px;
-    border: 1px solid ${colors.darkGrey};
+    max-height: 90vh;
 `;
 
 const Heading = styled.div`
     display: flex;
     align-items: center;
+    margin-bottom: 1rem;
 `;
 
 const Border = styled.div`
     margin-left: 10px;
-    border-bottom: 1px solid ${colors.darkGrey};
-    width: 200px;
+    border-bottom: .05px solid ${colors.mediumGrey};
+    width: 350px;
+`;
+
+const InnerWrapper = styled.div`
+    word-wrap: break-word;
+    display: flex;
+    flex-direction: row;
+`;
+
+const DesWrapper = styled.div`
+    max-width: 500px;
+    margin-right: 30px;
+`;
+
+const Portrait = styled.div`
+    width: 325px;
+    height: 325px;
+    border: 1px solid black;
 `;
 
 const text = `Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.`;
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+`;
 
 const About = () => {
     return (
-        <Wrapper className='page-section' id='About'>
-            <Heading>
-                <SectionTitle>01. ABOUT ME</SectionTitle>
-                <Border/>
-            </Heading>
-            <InnerWrapper>
-                <Description>{text}</Description>
-                <Portrait/>
-            </InnerWrapper>
-        </Wrapper>
+            <section className='page-section' name='about'>
+                <Wrapper>
+                    <Heading>
+                        <SectionTitle>01. ABOUT ME</SectionTitle>
+                        <Border/>
+                    </Heading>
+                    <InnerWrapper>
+                        <DesWrapper>
+                            <Description>{text}</Description>
+                        </DesWrapper>
+                        <Portrait/>
+                    </InnerWrapper>
+                </Wrapper>
+            </section>
     );
 };
 
 export default memo(About);
-
-// <BlurbWrapper>
-// <Description>
-//     Based out of Brooklyn, I'm passionate about building well-written software and crafting delightful user experiences. Currently, I work at Disney, where I specialize in developing responsive and scalable streaming applications for the web.
-// </Description>
-// </BlurbWrapper>

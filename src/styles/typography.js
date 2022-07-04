@@ -3,7 +3,7 @@ import { colors } from './colors';
 
 export const Title = styled.h1`
     margin: 0;
-    font-size 100px;
+    font-size 5rem;
     font-family: 'blenny', sans-serif;
     font-weight: 900;
     line-height: 1.5;
@@ -15,7 +15,7 @@ export const Title = styled.h1`
 
 export const Subtitle = styled.h2`
     margin: 0 0 50px;
-    font-size: 40px;
+    font-size: 2.5rem;
     color: ${colors.darkGrey};
     font-family: dapifer, serif;
     font-weight: 900;
@@ -23,7 +23,7 @@ export const Subtitle = styled.h2`
 `;
 
 export const Link = styled.a`
-    font-size: 32px;
+    font-size: 1.6rem;
     font-family: acumin-pro-extra-condensed, sans-serif;
     font-weight: 800;
     font-style: normal;
@@ -33,7 +33,7 @@ export const Link = styled.a`
 `;
 
 export const LinkDescription = styled.p`
-    font-size: 24px;
+    font-size: 1.3rem;
     font-family: halyard-text, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -41,21 +41,21 @@ export const LinkDescription = styled.p`
     margin: 0 0 40px 0;
 `;
 
-
 export const SectionTitle = styled.h2`
     margin: 0;
-    font-size: 24px;
+    font-size: 1.3rem;
     color: ${colors.black};
     font-family: dapifer, serif;
     font-weight: 900;
     font-style: normal;
 `;
 
-export const Description = styled.p`
-    font-size: 16px;
+export const Description = styled.div`
+    font-size: 1rem;
     font-family: halyard-text, sans-serif;
     font-weight: 400;
     font-style: normal;
-    margin: 0;
+    text-align: justify;
+    text-justify: inter-word;
     color: ${colors.darkGrey};
 `;

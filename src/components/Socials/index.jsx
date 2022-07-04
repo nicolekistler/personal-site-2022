@@ -11,29 +11,35 @@ import {
 const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
-    width: 7%;
+    padding: 0 30px 0 30px;
     align-items: center;
 `;
 
 const Border = styled.div`
-    border-left: 1px solid ${colors.darkGrey};
-    height: 200px;
+    border-left: .15rem solid ${colors.mediumGrey};
+    height: 30vh;
+`;
+
+const BottomBorder = styled.div`
+    border-left: .15rem solid ${colors.mediumGrey};
+    height: 45vh;
 `;
 
 const Icon = styled.img`
     margin: 10px 0 10px;
-    height: 24px;
+    height: 25px;
 `;
+
 
 const Socials = () => {
     return (
         <Wrapper>
             <Border/>
-            <Icon src={codepenIcon}/>
-            <Icon src={githubIcon}/>
             <Icon src={linkedinIcon}/>
+            <Icon src={githubIcon}/>
+            <Icon src={codepenIcon}/>
             <Icon src={twitterIcon}/>
-            <Border/>
+            <BottomBorder/>
         </Wrapper>
     );
 };

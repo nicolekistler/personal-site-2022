@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { colors } from '../../styles/colors';
 import { Description, SectionTitle } from '../../styles/typography';
 
-const Wrapper = styled.section`
+const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,23 +16,25 @@ const Button = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 20px 10px 20px;
+    padding: 8px 20px 10px 20px;
     background-color: black;
     font-family: dapifer, serif;
     font-weight: 900;
     font-size: 21px;
     color: white;
-    margin-top: 30px;
+    margin-top: 3rem;
 `;
 
 const Heading = styled.div`
     display: flex;
     align-items: center;
+    margin-bottom: 1rem;
 `;
 
 const Border = styled.div`
     margin-left: 10px;
-    border-bottom: 1px solid ${colors.darkGrey};
+    border-bottom: .05px solid ${colors.mediumGrey};
+    margin: 0 10px 0 10px;
     width: 200px;
 `;
 
@@ -42,7 +44,7 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
 
 const Contact = () => {
     return (
-        <section className='page-section' id='Contact' style={{backgroundColor: colors.lavender}}>
+        <section className='page-section' name='contact' style={{backgroundColor: colors.lavender}}>
             <Wrapper>
                 <Heading>
                     <Border/>
