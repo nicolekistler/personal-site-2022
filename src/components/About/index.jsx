@@ -30,7 +30,7 @@ const InnerWrapper = styled.div`
     flex-direction: row;
 `;
 
-const DesWrapper = styled.div`
+const BodyWrapper = styled.div`
     max-width: 500px;
     margin-right: 30px;
 `;
@@ -58,9 +58,9 @@ const About = () => {
                         <Border/>
                     </Heading>
                     <InnerWrapper>
-                        <DesWrapper>
+                        <BodyWrapper>
                             <Description>{text}</Description>
-                        </DesWrapper>
+                        </BodyWrapper>
                         <Portrait/>
                     </InnerWrapper>
                 </Wrapper>
