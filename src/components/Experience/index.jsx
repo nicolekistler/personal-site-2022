@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { memo, useState } from 'react';
 import styled from 'styled-components';
 import { colors } from '../../styles/colors';
 import { SectionTitle } from '../../styles/typography';
@@ -10,7 +10,6 @@ const Wrapper = styled.div`
     width: 50%;
     margin: auto;
 `;
-
 
 const Heading = styled.div`
     display: flex;
@@ -38,21 +37,22 @@ const TabWrapper = styled.div`
 
 const TabSelector = styled.div`
     display: flex;
-    border-left: 2px solid red;
+    border-left: 2px solid ${colors.lightGrey};
     flex-direction: column;
     width: 100px;
-    height: 300px;
+    height: 200px;
 `;
 
 const Tab = styled.div`
     display: flex;
     width: 100px;
     padding: 15px;
+    cursor: pointer;
 `;
 
 const TabHighlight = styled.div`
-    border-left: 2px solid cyan;
-    transform: translate(2px, 50px);
+    border-left: 2px solid black;
+    transform: translate(2px, ${({ translateYValue }) => translateYValue}px);
     height: 50px;
     transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     transition-delay: 0.1s;
@@ -70,6 +70,11 @@ const text = `Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.`;
 
 const Experience = () => {
+
+    const [activeTabId, setActiveTab] = useState(0);
+
+    const translateYValue = 50 * activeTabId;
+
     return (
         <section className='page-section' name='experience' style={{backgroundColor: colors.offWhite}}>
             <Wrapper>
@@ -79,10 +84,10 @@ const Experience = () => {
                 </Heading>
                 <Timeline>
                     <TabWrapper>
-                        <TabHighlight/>
+                        <TabHighlight translateYValue={translateYValue}/>
                         <TabSelector>
-                            <Tab>Disney</Tab>
-                            <Tab>Focus</Tab>
+                            <Tab onClick={() => { setActiveTab(0)}}>Disney</Tab>
+                            <Tab onClick={() => { setActiveTab(1)}}>Focus</Tab>
                         </TabSelector>
                     </TabWrapper>
                     <PanelWrapper>
