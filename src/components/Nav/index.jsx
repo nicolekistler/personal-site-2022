@@ -1,4 +1,4 @@
-import React, { memo, useEffect } from 'react';
+import React, { memo } from 'react';
 import styled from 'styled-components';
 import { LinkDescription, Link } from '../../styles/typography';
 import { scroller } from 'react-scroll';
