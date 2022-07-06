@@ -2,6 +2,7 @@ import React, { memo, useState } from 'react';
 import styled from 'styled-components';
 import { colors } from '../../styles/colors';
 import { SectionTitle } from '../../styles/typography';
+import { timelineData } from './data';
 
 const Wrapper = styled.div`
     display: flex;
@@ -39,13 +40,13 @@ const TabSelector = styled.div`
     display: flex;
     border-left: 2px solid ${colors.lightGrey};
     flex-direction: column;
-    width: 100px;
-    height: 200px;
+    width: 125px;
+    height: 245px;
 `;
 
 const Tab = styled.div`
     display: flex;
-    width: 100px;
+    width: 125px;
     padding: 15px;
     cursor: pointer;
 `;
@@ -60,20 +61,19 @@ const TabHighlight = styled.div`
 
 const PanelWrapper = styled.div`
     display: flex;
-    margin: 15px 0 0 15px;
+    flex-direction: row;
+    margin: 15px 0 0 50px;
     width: 600px;
     height: 300px;
 `;
-
-const text = `Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
-
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.`;
 
 const Experience = () => {
 
     const [activeTabId, setActiveTab] = useState(0);
 
-    const translateYValue = 50 * activeTabId;
+    const translateYValue = 65 * activeTabId;
+
+    const experienceToRender = timelineData[activeTabId];
 
     return (
         <section className='page-section' name='experience' style={{backgroundColor: colors.offWhite}}>
@@ -86,12 +86,20 @@ const Experience = () => {
                     <TabWrapper>
                         <TabHighlight translateYValue={translateYValue}/>
                         <TabSelector>
-                            <Tab onClick={() => { setActiveTab(0)}}>Disney</Tab>
-                            <Tab onClick={() => { setActiveTab(1)}}>Focus</Tab>
+                        {
+                            timelineData.map((item) => {
+                                return (
+                                    <Tab onClick={() => { setActiveTab(item.id)}}>{item.tabTitle}</Tab>
+                                );
+                            })
+                        }
                         </TabSelector>
                     </TabWrapper>
                     <PanelWrapper>
-                        {text}
+                        {experienceToRender.panelTitle}
+                        {experienceToRender.panelSubtitle}
+                        {experienceToRender.range}
+                        {experienceToRender.descriptions[0]}
                     </PanelWrapper>
                 </Timeline>
             </Wrapper>
