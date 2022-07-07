@@ -59,3 +59,40 @@ export const Description = styled.div`
     text-justify: inter-word;
     color: ${colors.darkGrey};
 `;
+
+export const TitleSmall = styled.div`
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-family: dapifer, serif;
+    font-weight: 400;
+    color: ${colors.darkGrey};
+`;
+export const SubtitleSmall = styled.div`
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    font-family: dapifer, serif;
+    font-weight: 400;
+    color: ${colors.darkGrey};
+`;
+
+export const Range = styled.div`
+    font-size: 1rem;
+    font-family: halyard-text, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: ${colors.black};
+`;
+
+
+export const DescriptionSmall = styled.div`
+    font-size: .9rem;
+    margin: 20px 0 20px 0;
+    font-family: halyard-text, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: justify;
+    text-justify: inter-word;
+    color: ${colors.black};
+`;
+
