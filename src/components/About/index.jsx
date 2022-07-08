@@ -41,12 +41,12 @@ const Portrait = styled.div`
     border: 1px solid black;
 `;
 
-const text = `Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
-
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
-
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+const text = `Based in Brooklyn, New York, I'm a Software Engineer with six years of experience building applications for the Web.
+I've worked on everything from small projects at startups to global products with hundreds of millions of subscribers.
+Furthermore, I have a wide breadth of knowledge throughout the stack, although lately, I've mainly focused on writing frontend.
+For the past two years, I've worked for the Walt Disney Company, where I bring new and exciting features to life on our streaming platform, Disney+.
+Before my current role, I spent over three years in the education tech space, writing software to serve school districts around the US.
+Outside of work, my hobbies include cooking, spending time with my two dogs, trying new food around the city, hiking, reading, and playing video games.  
 `;
 
 const About = () => {

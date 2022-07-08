@@ -8,7 +8,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 40%;
     margin: auto;
 `;
 
@@ -38,9 +38,10 @@ const Border = styled.div`
     width: 200px;
 `;
 
-const text = `Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
-
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.`;
+const text = `If you're interested in getting to know me further, I'd love to chat!
+Although I'm not actively seeking a new role, I'm always open to hearing about exciting opportunities that may be a good fit.
+In addition to reaching out about roles, feel free to get in touch about mentorship opportunities—I am currently available to provide mentorship to new devs or anyone looking to break into tech.
+`;
 
 const Contact = () => {
     return (
