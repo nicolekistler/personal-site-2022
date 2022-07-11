@@ -50,9 +50,27 @@ Outside of work, my hobbies include cooking, spending time with my two dogs, try
 `;
 
 const About = () => {
+    const [isVisible, setVisible] = React.useState(true);
+    
+    const domRef = React.useRef();
+    
+    React.useEffect(() => {
+      
+        const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => setVisible(entry.isIntersecting));
+      });
+
+      observer.observe(domRef.current);
+      
+      return () => observer.unobserve(domRef.current);
+    }, []);
+
     return (
             <section className='page-section' name='about'>
-                <Wrapper>
+                <Wrapper
+                    className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
+                    ref={domRef}
+                >
                     <Heading>
                         <SectionTitle>01. ABOUT ME</SectionTitle>
                         <Border/>

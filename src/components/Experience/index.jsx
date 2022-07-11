@@ -74,6 +74,19 @@ const PanelWrapper = styled.div`
 `;
 
 const Experience = () => {
+    const [isVisible, setVisible] = React.useState(true);
+    
+    const domRef = React.useRef();
+    
+    React.useEffect(() => {
+        const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => setVisible(entry.isIntersecting));
+      });
+
+      observer.observe(domRef.current);
+      
+      return () => observer.unobserve(domRef.current);
+    }, []);
 
     const [activeTabId, setActiveTab] = useState(0);
 
@@ -83,7 +96,10 @@ const Experience = () => {
 
     return (
         <section className='page-section' name='experience' style={{backgroundColor: colors.offWhite}}>
-            <Wrapper>
+            <Wrapper
+                className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
+                ref={domRef}
+            >
                 <Heading>
                     <SectionTitle>02. EXPERIENCE</SectionTitle>
                     <Border/>

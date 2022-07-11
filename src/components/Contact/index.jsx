@@ -40,13 +40,31 @@ const Border = styled.div`
 
 const text = `If you're interested in getting to know me further, I'd love to chat!
 Although I'm not actively seeking a new role, I'm always open to hearing about exciting opportunities that may be a good fit.
-In addition to reaching out about roles, feel free to get in touch about mentorship opportunities—I am currently available to provide mentorship to new devs or anyone looking to break into tech.
+In addition to reaching out about roles, feel free to get in touch about mentorship opportunities—I am currently available to provide mentorship to new devs or anyone looking to learn more about tech.
 `;
 
 const Contact = () => {
+    const [isVisible, setVisible] = React.useState(true);
+    
+    const domRef = React.useRef();
+    
+    React.useEffect(() => {
+      
+        const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => setVisible(entry.isIntersecting));
+      });
+
+      observer.observe(domRef.current);
+      
+      return () => observer.unobserve(domRef.current);
+    }, []);
+    
     return (
         <section className='page-section' name='contact' style={{backgroundColor: colors.lavender}}>
-            <Wrapper>
+            <Wrapper
+                className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
+                ref={domRef}
+            >
                 <Heading>
                     <Border/>
                     <SectionTitle>03. CONTACT</SectionTitle>
