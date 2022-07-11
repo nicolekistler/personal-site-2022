@@ -8,6 +8,7 @@ import {
     SubtitleSmall,
     TitleSmall
 } from '../../styles/typography';
+import FadeWrapper from '../FadeWrapper';
 import { timelineData } from './data';
 
 const Wrapper = styled.div`
@@ -74,74 +75,62 @@ const PanelWrapper = styled.div`
 `;
 
 const Experience = () => {
-    const [isVisible, setVisible] = React.useState(true);
-    
-    const domRef = React.useRef();
-    
-    React.useEffect(() => {
-        const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => setVisible(entry.isIntersecting));
-      });
-
-      observer.observe(domRef.current);
-      
-      return () => observer.unobserve(domRef.current);
-    }, []);
-
     const [activeTabId, setActiveTab] = useState(0);
 
     const translateYValue = 65 * activeTabId;
 
     const experienceToRender = timelineData[activeTabId];
 
-    return (
-        <section className='page-section' name='experience' style={{backgroundColor: colors.offWhite}}>
-            <Wrapper
-                className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
-                ref={domRef}
-            >
-                <Heading>
-                    <SectionTitle>02. EXPERIENCE</SectionTitle>
-                    <Border/>
-                </Heading>
-                <Timeline>
-                    <TabWrapper>
-                        <TabHighlight translateYValue={translateYValue}/>
-                        <TabSelector>
+    const content = 
+        <>
+            <Heading>
+                <SectionTitle>02. EXPERIENCE</SectionTitle>
+                <Border/>
+            </Heading>
+            <Timeline>
+                <TabWrapper>
+                    <TabHighlight translateYValue={translateYValue}/>
+                    <TabSelector>
+                    {
+                        timelineData.map((item, index) => {
+                            return (
+                                <Tab 
+                                    isActive={activeTabId === index}
+                                    key={`tab-${index}`}
+                                    onClick={() => { setActiveTab(index)}}
+                                >
+                                    {item.tabTitle}
+                                </Tab>
+                            );
+                        })
+                    }
+                    </TabSelector>
+                </TabWrapper>
+                <PanelWrapper>
+                    <div style={{flexDirection: 'row', display: 'flex'}}>
+                        <TitleSmall>{experienceToRender.panelTitle}</TitleSmall>
+                        <SubtitleSmall>{experienceToRender.panelSubtitle}</SubtitleSmall>
+                    </div>
+                    <Range>{experienceToRender.range}</Range>
+                    <div>
                         {
-                            timelineData.map((item, index) => {
+                            experienceToRender.descriptions.map((item, index) => {
                                 return (
-                                    <Tab 
-                                        isActive={activeTabId === index}
-                                        key={`tab-${index}`}
-                                        onClick={() => { setActiveTab(index)}}
-                                    >
-                                        {item.tabTitle}
-                                    </Tab>
+                                    <DescriptionSmall key={`description-${index}`}>
+                                        {item}
+                                    </DescriptionSmall>
                                 );
                             })
                         }
-                        </TabSelector>
-                    </TabWrapper>
-                    <PanelWrapper>
-                        <div style={{flexDirection: 'row', display: 'flex'}}>
-                            <TitleSmall>{experienceToRender.panelTitle}</TitleSmall>
-                            <SubtitleSmall>{experienceToRender.panelSubtitle}</SubtitleSmall>
-                        </div>
-                        <Range>{experienceToRender.range}</Range>
-                        <div>
-                            {
-                                experienceToRender.descriptions.map((item, index) => {
-                                    return (
-                                        <DescriptionSmall key={`description-${index}`}>
-                                            {item}
-                                        </DescriptionSmall>
-                                    );
-                                })
-                            }
-                        </div>
-                    </PanelWrapper>
-                </Timeline>
+                    </div>
+                </PanelWrapper>
+            </Timeline>
+        </>;
+
+    return (
+        <section className='page-section' name='experience' style={{backgroundColor: colors.offWhite}}>
+            <Wrapper>
+                <FadeWrapper contentToFade={content}/>
             </Wrapper>
         </section>
     );

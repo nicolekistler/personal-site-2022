@@ -2,6 +2,7 @@ import React, { memo } from 'react';
 import styled from 'styled-components';
 import { colors } from '../../styles/colors';
 import { Description, SectionTitle } from '../../styles/typography';
+import FadeWrapper from '../FadeWrapper';
 
 const Wrapper = styled.div`
     display: flex;
@@ -41,7 +42,7 @@ const Portrait = styled.div`
     border: 1px solid black;
 `;
 
-const text = `Based in Brooklyn, New York, I'm a Software Engineer with six years of experience building applications for the Web.
+const text = `Based out of Brooklyn, I'm a Software Engineer with six years of experience building applications for the Web.
 I've worked on everything from small projects at startups to global products with hundreds of millions of subscribers.
 Furthermore, I have a wide breadth of knowledge throughout the stack, although lately, I've mainly focused on writing frontend.
 For the past two years, I've worked for the Walt Disney Company, where I bring new and exciting features to life on our streaming platform, Disney+.
@@ -50,39 +51,26 @@ Outside of work, my hobbies include cooking, spending time with my two dogs, try
 `;
 
 const About = () => {
-    const [isVisible, setVisible] = React.useState(true);
-    
-    const domRef = React.useRef();
-    
-    React.useEffect(() => {
-      
-        const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => setVisible(entry.isIntersecting));
-      });
-
-      observer.observe(domRef.current);
-      
-      return () => observer.unobserve(domRef.current);
-    }, []);
+    const content = 
+        <>
+            <Heading>
+                <SectionTitle>01. ABOUT ME</SectionTitle>
+                <Border/>
+            </Heading>
+            <InnerWrapper>
+                <BodyWrapper>
+                    <Description>{text}</Description>
+                </BodyWrapper>
+                <Portrait/>
+            </InnerWrapper>
+        </>
 
     return (
-            <section className='page-section' name='about'>
-                <Wrapper
-                    className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
-                    ref={domRef}
-                >
-                    <Heading>
-                        <SectionTitle>01. ABOUT ME</SectionTitle>
-                        <Border/>
-                    </Heading>
-                    <InnerWrapper>
-                        <BodyWrapper>
-                            <Description>{text}</Description>
-                        </BodyWrapper>
-                        <Portrait/>
-                    </InnerWrapper>
-                </Wrapper>
-            </section>
+        <section className='page-section' name='about'>
+            <Wrapper>
+                <FadeWrapper contentToFade={content}/>
+            </Wrapper>
+        </section>
     );
 };
 

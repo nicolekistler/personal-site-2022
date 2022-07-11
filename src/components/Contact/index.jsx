@@ -2,6 +2,7 @@ import React, { memo } from 'react';
 import styled from 'styled-components';
 import { colors } from '../../styles/colors';
 import { Description, SectionTitle } from '../../styles/typography';
+import FadeWrapper from '../FadeWrapper';
 
 const Wrapper = styled.div`
     display: flex;
@@ -22,7 +23,7 @@ const Button = styled.div`
     font-weight: 900;
     font-size: 21px;
     color: white;
-    margin-top: 3rem;
+    margin-top: 2rem;
 `;
 
 const Heading = styled.div`
@@ -44,27 +45,9 @@ In addition to reaching out about roles, feel free to get in touch about mentors
 `;
 
 const Contact = () => {
-    const [isVisible, setVisible] = React.useState(true);
-    
-    const domRef = React.useRef();
-    
-    React.useEffect(() => {
-      
-        const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => setVisible(entry.isIntersecting));
-      });
-
-      observer.observe(domRef.current);
-      
-      return () => observer.unobserve(domRef.current);
-    }, []);
-    
-    return (
-        <section className='page-section' name='contact' style={{backgroundColor: colors.lavender}}>
-            <Wrapper
-                className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
-                ref={domRef}
-            >
+    const content = 
+        <>
+            <Wrapper>
                 <Heading>
                     <Border/>
                     <SectionTitle>03. CONTACT</SectionTitle>
@@ -73,6 +56,11 @@ const Contact = () => {
                 <Description>{text}</Description>
                 <Button>Reach Out</Button>
             </Wrapper>
+        </>;
+    
+    return (
+        <section className='page-section' name='contact' style={{backgroundColor: colors.lavender}}>
+                <FadeWrapper contentToFade={content} customStyle={{ margin: 'auto'}}/>
         </section>
     );
 };
