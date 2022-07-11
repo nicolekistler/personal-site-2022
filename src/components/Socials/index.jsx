@@ -7,12 +7,18 @@ import {
     linkedinIcon,
     twitterIcon
 } from '../../assets/icons';
+import { breakpoints } from '../../styles/breakpoints';
 
 const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     padding: 0 30px 0 30px;
     align-items: center;
+    visibility: hidden;
+
+    @media (min-width: ${breakpoints.s}px) {
+        visibility: visible;
+    }
 `;
 
 const Border = styled.div`
