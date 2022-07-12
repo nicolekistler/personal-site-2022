@@ -11,12 +11,7 @@ const Wrapper = styled.div`
     justify-content: center;
     max-width: 70%;
     margin: auto;
-    overflow: scroll;
     max-height: 90vh;
-
-    @media (min-width: ${breakpoints.s}px) {
-        overflow: none;
-    }
 `;
 
 const Heading = styled.div`

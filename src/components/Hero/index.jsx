@@ -2,6 +2,7 @@ import React, { memo } from 'react';
 import styled from 'styled-components';
 import { colors } from '../../styles/colors';
 import { Title, Subtitle } from '../../styles/typography';
+import { breakpoints } from '../../styles/breakpoints';
 
 import Nav from '../Nav';
 import Socials from '../Socials';
@@ -27,7 +28,11 @@ const InnerWrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 5%;
+    margin: auto;
+
+    @media (min-width: ${breakpoints.s}px) {
+        margin-left: 5%;
+    }
 `;
 
 const Hero = () => {

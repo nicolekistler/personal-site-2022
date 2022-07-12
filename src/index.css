@@ -5,6 +5,7 @@ body {
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-width: -webkit-fill-available;
 }
 
 * {
@@ -15,6 +16,8 @@ body {
   display: flex;
   height: 100vh;
   width: 100%;
+  min-width: -webkit-fill-available;
+  overflow: hidden;
 }
 
 .fade-in-section {

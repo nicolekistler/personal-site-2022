@@ -123,7 +123,7 @@ export const Range = styled.div`
 
 
 export const DescriptionSmall = styled.div`
-    font-size: .7rem;
+    font-size: .9rem;
     margin: 20px 0 20px 0;
     font-family: halyard-text, sans-serif;
     font-weight: 400;

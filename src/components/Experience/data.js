@@ -35,7 +35,7 @@ export const timelineData = [{
         ]
     },
     {
-        tabTitle: 'New College of Florida',
+        tabTitle: 'New College',
         panelTitle: 'Bachelor of Arts in ',
         panelSubtitle: ' History',
         range: 'August 2012—June 2016',

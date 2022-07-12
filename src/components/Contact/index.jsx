@@ -12,9 +12,11 @@ const Wrapper = styled.div`
     align-items: center;
     width: 60%;
     margin: auto;
+    // background-color: red;
 
-    @media (min-width: ${breakpoints.s}px) {
-        width: 50%;
+    @media (min-width: ${breakpoints.m}px) {
+        width: 40%;
+        // background-color: blue;
     }
 `;
 
