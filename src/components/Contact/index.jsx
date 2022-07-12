@@ -1,7 +1,8 @@
 import React, { memo } from 'react';
 import styled from 'styled-components';
-import { colors } from '../../styles/colors';
 import { Description, SectionTitle } from '../../styles/typography';
+import { breakpoints } from '../../styles/breakpoints';
+import { colors } from '../../styles/colors';
 import FadeWrapper from '../FadeWrapper';
 
 const Wrapper = styled.div`
@@ -9,8 +10,12 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 40%;
+    width: 60%;
     margin: auto;
+
+    @media (min-width: ${breakpoints.s}px) {
+        width: 50%;
+    }
 `;
 
 const Button = styled.div`
@@ -36,12 +41,16 @@ const Border = styled.div`
     margin-left: 10px;
     border-bottom: .05px solid ${colors.mediumGrey};
     margin: 0 10px 0 10px;
-    width: 200px;
+    width: 50px;
+
+    @media (min-width: ${breakpoints.s}px) {
+        width: 200px;
+    }
 `;
 
 const text = `If you're interested in getting to know me further, I'd love to chat!
 Although I'm not actively seeking a new role, I'm always open to hearing about exciting opportunities that may be a good fit.
-In addition to reaching out about roles, feel free to get in touch about mentorship opportunities—I am currently available to provide mentorship to new devs or anyone looking to learn more about tech.
+In addition to reaching out about roles, feel free to get in touch about mentorship—I am currently available to provide mentorship to new devs or anyone looking to learn more about tech.
 `;
 
 const Contact = () => {

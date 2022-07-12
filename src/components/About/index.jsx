@@ -1,6 +1,7 @@
 import React, { memo } from 'react';
 import styled from 'styled-components';
 import { colors } from '../../styles/colors';
+import { breakpoints } from '../../styles/breakpoints';
 import { Description, SectionTitle } from '../../styles/typography';
 import FadeWrapper from '../FadeWrapper';
 
@@ -10,7 +11,12 @@ const Wrapper = styled.div`
     justify-content: center;
     max-width: 70%;
     margin: auto;
+    overflow: scroll;
     max-height: 90vh;
+
+    @media (min-width: ${breakpoints.s}px) {
+        overflow: none;
+    }
 `;
 
 const Heading = styled.div`
@@ -28,7 +34,12 @@ const Border = styled.div`
 const InnerWrapper = styled.div`
     word-wrap: break-word;
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
+
+    @media (min-width: ${breakpoints.s}px) {
+        flex-direction: row;
+    }
+
 `;
 
 const BodyWrapper = styled.div`
@@ -37,9 +48,15 @@ const BodyWrapper = styled.div`
 `;
 
 const Portrait = styled.div`
-    width: 325px;
-    height: 325px;
     border: 1px solid black;
+    visibility: hidden;
+
+    @media (min-width: ${breakpoints.s}px) {
+        height: 325px;
+        width: 325px;
+        margin: 0;
+        visibility: visible
+    }
 `;
 
 const text = `Based out of Brooklyn, I'm a Software Engineer with six years of experience building applications for the Web.

@@ -1,6 +1,7 @@
 import React, { memo, useState } from 'react';
 import styled from 'styled-components';
 import { colors } from '../../styles/colors';
+import { breakpoints } from '../../styles/breakpoints';
 import { 
     DescriptionSmall,
     Range,
@@ -16,19 +17,28 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     width: 50%;
-    margin: auto;
+    margin: auto 20px auto 20px;
+
+    @media (min-width: ${breakpoints.s}px) {
+        margin: auto;
+    }
 `;
 
 const Heading = styled.div`
     display: flex;
     align-items: center;
     margin-bottom: 1.2rem;
+    width: 100%;
 `;
 
 const Border = styled.div`
     margin-left: 10px;
     border-bottom: .05px solid ${colors.mediumGrey};
-    width: 350px;
+    // @TODO modify this for smaller dimensions
+
+    @media (min-width: ${breakpoints.s}px) {
+        width: 350px;
+    }
 `;
 
 const Timeline = styled.div`
@@ -57,6 +67,10 @@ const Tab = styled.div`
     cursor: pointer;
     color: ${({ isActive }) => isActive ? colors.black : colors.darkGrey};
     background-color: ${({ isActive }) => isActive && '#e3e3e3'};
+
+    @media (max-width: ${breakpoints.s}px) {
+        font-size: .9rem;
+    }
 `;
 
 const TabHighlight = styled.div`

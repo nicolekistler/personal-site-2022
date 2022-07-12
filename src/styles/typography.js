@@ -59,12 +59,17 @@ export const LinkDescription = styled.p`
 `;
 
 export const SectionTitle = styled.h2`
-    margin: 0;
+    margin: auto;
     font-size: 1.3rem;
     color: ${colors.black};
     font-family: dapifer, serif;
     font-weight: 900;
     font-style: normal;
+    white-space: nowrap; 
+
+    @media (min-width: ${breakpoints.s}px) {
+        margin: 0;
+    }
 `;
 
 export const Description = styled.div`
@@ -78,32 +83,47 @@ export const Description = styled.div`
 `;
 
 export const TitleSmall = styled.div`
-    font-size: 1.2rem;
+    font-size: .9rem;
     margin-bottom: 10px;
     font-family: dapifer, serif;
     font-weight: 400;
     color: ${colors.darkGrey};
+    white-space: nowrap; 
+
+    @media (min-width: ${breakpoints.s}px) {
+        font-size: 1.2rem;
+    }
 `;
 export const SubtitleSmall = styled.div`
-    font-size: 1.2rem;
+    font-size: .9rem;
     margin-bottom: 10px;
     margin-left: 5px;
     font-family: dapifer, serif;
     font-weight: 400;
     color: ${colors.darkGrey};
+    white-space: nowrap; 
+
+    @media (min-width: ${breakpoints.s}px) {
+        font-size: 1.2rem;
+    }
 `;
 
 export const Range = styled.div`
-    font-size: 1rem;
+    white-space: nowrap; 
+    font-size: .8rem;
     font-family: halyard-text, sans-serif;
     font-weight: 500;
     font-style: normal;
     color: ${colors.black};
+
+    @media (min-width: ${breakpoints.s}px) {
+        font-size: 1rem;
+    }
 `;
 
 
 export const DescriptionSmall = styled.div`
-    font-size: .9rem;
+    font-size: .7rem;
     margin: 20px 0 20px 0;
     font-family: halyard-text, sans-serif;
     font-weight: 400;
@@ -111,5 +131,9 @@ export const DescriptionSmall = styled.div`
     text-align: justify;
     text-justify: inter-word;
     color: ${colors.black};
+
+    @media (min-width: ${breakpoints.s}px) {
+        font-size: .9rem;
+    }
 `;
 
