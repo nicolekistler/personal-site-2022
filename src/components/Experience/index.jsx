@@ -66,9 +66,10 @@ const Tab = styled.div`
     cursor: pointer;
     color: ${({ isActive }) => isActive ? colors.black : colors.darkGrey};
     background-color: ${({ isActive }) => isActive && '#e3e3e3'};
+    font-size: 1rem;
 
-    @media (max-width: ${breakpoints.s}px) {
-        font-size: .9rem;
+    @media (min-width: ${breakpoints.s}px) {
+        font-size: 1.2rem;
     }
 `;
 
@@ -85,6 +86,7 @@ const PanelWrapper = styled.div`
     flex-direction: column;
     margin: 10px 0 0 80px;
     height: 300px;
+    width: 45vw;
 `;
 
 const Experience = () => {
@@ -141,7 +143,8 @@ const Experience = () => {
         </>;
 
     return (
-        <section className='page-section' name='experience' style={{backgroundColor: colors.offWhite}}>
+        <section className='page-section' name='experience'>
+            {/*  style={{backgroundColor: colors.offWhite}} */}
             <Wrapper>
                 <FadeWrapper contentToFade={content}/>
             </Wrapper>

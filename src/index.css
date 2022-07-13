@@ -18,6 +18,8 @@ body {
   width: 100%;
   min-width: -webkit-fill-available;
   overflow: hidden;
+  position: relative;
+  z-index: 3;
 }
 
 .fade-in-section {

@@ -60,7 +60,7 @@ export const LinkDescription = styled.p`
 
 export const SectionTitle = styled.h2`
     margin: auto;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: ${colors.black};
     font-family: dapifer, serif;
     font-weight: 900;
@@ -68,22 +68,27 @@ export const SectionTitle = styled.h2`
     white-space: nowrap; 
 
     @media (min-width: ${breakpoints.s}px) {
+        font-size: 1.7rem;
         margin: 0;
     }
 `;
 
 export const Description = styled.div`
-    font-size: 1rem;
+    font-size: .9rem;
     font-family: halyard-text, sans-serif;
     font-weight: 400;
     font-style: normal;
     text-align: justify;
     text-justify: inter-word;
     color: ${colors.darkGrey};
+
+    @media (min-width: ${breakpoints.s}px) {
+        font-size: 1.25rem;
+    }
 `;
 
 export const TitleSmall = styled.div`
-    font-size: .9rem;
+    font-size: 1.2rem;
     margin-bottom: 10px;
     font-family: dapifer, serif;
     font-weight: 400;
@@ -91,11 +96,11 @@ export const TitleSmall = styled.div`
     white-space: nowrap; 
 
     @media (min-width: ${breakpoints.s}px) {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
 `;
 export const SubtitleSmall = styled.div`
-    font-size: .9rem;
+    font-size: 1.2rem;
     margin-bottom: 10px;
     margin-left: 5px;
     font-family: dapifer, serif;
@@ -104,26 +109,26 @@ export const SubtitleSmall = styled.div`
     white-space: nowrap; 
 
     @media (min-width: ${breakpoints.s}px) {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
 `;
 
 export const Range = styled.div`
     white-space: nowrap; 
-    font-size: .8rem;
+    font-size: 1rem;
     font-family: halyard-text, sans-serif;
     font-weight: 500;
     font-style: normal;
     color: ${colors.black};
 
     @media (min-width: ${breakpoints.s}px) {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 `;
 
 
 export const DescriptionSmall = styled.div`
-    font-size: .9rem;
+    font-size: 1rem;
     margin: 20px 0 20px 0;
     font-family: halyard-text, sans-serif;
     font-weight: 400;
@@ -133,7 +138,7 @@ export const DescriptionSmall = styled.div`
     color: ${colors.black};
 
     @media (min-width: ${breakpoints.s}px) {
-        font-size: .9rem;
+        font-size: 1.2rem;
     }
 `;
 

@@ -28,13 +28,18 @@ const Button = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 8px 20px 10px 20px;
+    padding: 10px 15px 10px 15px;
     background-color: black;
     font-family: dapifer, serif;
     font-weight: 900;
-    font-size: 21px;
+    font-size: 1.2rem;
     color: white;
     margin-top: 2rem;
+
+    @media (min-width: ${breakpoints.m}px) {
+        font-size: 1.6rem;
+        padding: 15px 25px 15px 25px;
+    }
 `;
 
 const Heading = styled.div`
@@ -74,7 +79,7 @@ const Contact = () => {
         </>;
     
     return (
-        <section className='page-section' name='contact' style={{backgroundColor: colors.lavender}}>
+        <section className='page-section' name='contact'>
                 <Wrapper>
                     <FadeWrapper contentToFade={content}/> 
                 </Wrapper>
