@@ -20,6 +20,7 @@ const Wrapper = styled.div`
     margin: auto 20px auto 20px;
 
     @media (min-width: ${breakpoints.s}px) {
+        width: auto;
         margin: auto;
     }
 `;
@@ -28,13 +29,11 @@ const Heading = styled.div`
     display: flex;
     align-items: center;
     margin-bottom: 1.2rem;
-    width: 100%;
 `;
 
 const Border = styled.div`
     margin-left: 10px;
     border-bottom: .05px solid ${colors.mediumGrey};
-    // @TODO modify this for smaller dimensions
 
     @media (min-width: ${breakpoints.s}px) {
         width: 350px;

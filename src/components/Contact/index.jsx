@@ -7,16 +7,20 @@ import FadeWrapper from '../FadeWrapper';
 
 const Wrapper = styled.div`
     display: flex;
+    justify-content: center;
+    align-items: center;
+`;
+
+const TextWrapper = styled.div`
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 60%;
     margin: auto;
-    // background-color: red;
 
     @media (min-width: ${breakpoints.m}px) {
         width: 40%;
-        // background-color: blue;
     }
 `;
 
@@ -58,7 +62,7 @@ In addition to reaching out about roles, feel free to get in touch about mentors
 const Contact = () => {
     const content = 
         <>
-            <Wrapper>
+            <TextWrapper>
                 <Heading>
                     <Border/>
                     <SectionTitle>03. CONTACT</SectionTitle>
@@ -66,12 +70,14 @@ const Contact = () => {
                 </Heading>
                 <Description>{text}</Description>
                 <Button>Reach Out</Button>
-            </Wrapper>
+            </TextWrapper>
         </>;
     
     return (
         <section className='page-section' name='contact' style={{backgroundColor: colors.lavender}}>
-                <FadeWrapper contentToFade={content} customStyle={{ margin: 'auto'}}/>
+                <Wrapper>
+                    <FadeWrapper contentToFade={content}/> 
+                </Wrapper>
         </section>
     );
 };

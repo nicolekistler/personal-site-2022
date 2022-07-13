@@ -11,7 +11,11 @@ const Wrapper = styled.div`
     justify-content: center;
     max-width: 70%;
     margin: auto;
-    max-height: 90vh;
+    height: 60vh;
+
+    @media (min-width: ${breakpoints.m}px) {
+        max-height: 90vh;
+    }
 `;
 
 const Heading = styled.div`
@@ -30,27 +34,35 @@ const InnerWrapper = styled.div`
     word-wrap: break-word;
     display: flex;
     flex-direction: column-reverse;
+    height: inherit;
+    overflow-y: auto;
 
-    @media (min-width: ${breakpoints.s}px) {
+    @media (min-width: ${breakpoints.m}px) {
         flex-direction: row;
     }
 
 `;
 
 const BodyWrapper = styled.div`
-    max-width: 500px;
-    margin-right: 30px;
+
+    @media (min-width: ${breakpoints.m}px) {
+        margin-right: 30px;
+        max-width: 500px;
+    }
 `;
 
 const Portrait = styled.div`
+    display: block;
     border: 1px solid black;
-    visibility: hidden;
+    height: 200px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 15px;
 
-    @media (min-width: ${breakpoints.s}px) {
+    @media (min-width: ${breakpoints.m}px) {
         height: 325px;
         width: 325px;
         margin: 0;
-        visibility: visible
     }
 `;
 
@@ -65,15 +77,16 @@ Outside of work, my hobbies include cooking, spending time with my two dogs, try
 const About = () => {
     const content = 
         <>
-            <Heading>
-                <SectionTitle>01. ABOUT ME</SectionTitle>
+            <Heading name="heading">
+                <SectionTitle name="section-title">01. ABOUT ME</SectionTitle>
                 <Border/>
             </Heading>
-            <InnerWrapper>
-                <BodyWrapper>
+            <InnerWrapper name="inner-wrapper">
+                <BodyWrapper name="body-text">
                     <Description>{text}</Description>
                 </BodyWrapper>
-                <Portrait/>
+                <div><Portrait name="portrait"/></div>
+                
             </InnerWrapper>
         </>
 
