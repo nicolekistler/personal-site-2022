@@ -56,27 +56,26 @@ const TabSelector = styled.div`
     border-left: 2px solid ${colors.mediumGrey};
     flex-direction: column;
     width: 125px;
-    height: 245px;
+    height: 280px;
 `;
 
 const Tab = styled.div`
     display: flex;
-    width: 125px;
-    padding: 15px;
+    height: 70px;
+    width: 100px;
+    font-size: 1.2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     cursor: pointer;
     color: ${({ isActive }) => isActive ? colors.black : colors.darkGrey};
     background-color: ${({ isActive }) => isActive && '#e3e3e3'};
-    font-size: 1rem;
-
-    @media (min-width: ${breakpoints.m}px) {
-        font-size: 1.2rem;
-    }
 `;
 
 const TabHighlight = styled.div`
     border-left: 2px solid black;
     transform: translate(2px, ${({ translateYValue }) => translateYValue}px);
-    height: 50px;
+    height: 70px;
     transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     transition-delay: 0.1s;
 `;
@@ -92,7 +91,7 @@ const PanelWrapper = styled.div`
 const Experience = () => {
     const [activeTabId, setActiveTab] = useState(0);
 
-    const translateYValue = 65 * activeTabId;
+    const translateYValue = 70 * activeTabId;
 
     const experienceToRender = timelineData[activeTabId];
 
@@ -110,6 +109,7 @@ const Experience = () => {
                         timelineData.map((item, index) => {
                             return (
                                 <Tab 
+                                    name='Test'
                                     isActive={activeTabId === index}
                                     key={`tab-${index}`}
                                     onClick={() => { setActiveTab(index)}}
