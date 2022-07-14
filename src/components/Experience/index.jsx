@@ -19,7 +19,7 @@ const Wrapper = styled.div`
     width: 50%;
     margin: auto 20px auto 20px;
 
-    @media (min-width: ${breakpoints.s}px) {
+    @media (min-width: ${breakpoints.m}px) {
         width: auto;
         margin: auto;
     }
@@ -35,7 +35,7 @@ const Border = styled.div`
     margin-left: 10px;
     border-bottom: .05px solid ${colors.mediumGrey};
 
-    @media (min-width: ${breakpoints.s}px) {
+    @media (min-width: ${breakpoints.m}px) {
         width: 350px;
     }
 `;
@@ -68,7 +68,7 @@ const Tab = styled.div`
     background-color: ${({ isActive }) => isActive && '#e3e3e3'};
     font-size: 1rem;
 
-    @media (min-width: ${breakpoints.s}px) {
+    @media (min-width: ${breakpoints.m}px) {
         font-size: 1.2rem;
     }
 `;

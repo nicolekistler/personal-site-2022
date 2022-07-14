@@ -54,7 +54,7 @@ const Border = styled.div`
     margin: 0 10px 0 10px;
     width: 50px;
 
-    @media (min-width: ${breakpoints.s}px) {
+    @media (min-width: ${breakpoints.m}px) {
         width: 200px;
     }
 `;

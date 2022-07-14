@@ -1,9 +1,11 @@
+import styled from 'styled-components';
+
 import Hero from './components/Hero';
 import About from './components/About';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
-import styled from 'styled-components';
 import { colors } from './styles/colors';
+import { breakpoints } from './styles/breakpoints';
 
 function App() {
 
@@ -34,10 +36,15 @@ function App() {
     position: absolute;
     z-index: 1;
     width: 100vw;
-    height: 170vh;
-    transform: translateY(170vh);
+    height: 160vh;
+    transform: translateY(180vh);
     background-color: ${colors.offWhite};
     clip-path: polygon(0 14%, 100% 8%, 100% 84%, 0 80%);
+
+    @media (min-width: ${breakpoints.m}px) {
+      transform: translateY(170vh);
+      height: 170vh;
+    }
   `;
   
   return (

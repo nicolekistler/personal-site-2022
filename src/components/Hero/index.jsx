@@ -30,7 +30,7 @@ const InnerWrapper = styled.div`
     justify-content: center;
     margin: auto;
 
-    @media (min-width: ${breakpoints.s}px) {
+    @media (min-width: ${breakpoints.m}px) {
         margin-left: 5%;
     }
 `;
