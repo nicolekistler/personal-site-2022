@@ -4,11 +4,13 @@ import { Description, SectionTitle } from '../../styles/typography';
 import { breakpoints } from '../../styles/breakpoints';
 import { colors } from '../../styles/colors';
 import FadeWrapper from '../FadeWrapper';
+import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 const Wrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 `;
 
 const TextWrapper = styled.div`
@@ -65,6 +67,8 @@ In addition to reaching out about roles, feel free to get in touch about mentors
 `;
 
 const Contact = () => {
+    const { width } = useWindowDimensions();
+
     const content = 
         <>
             <TextWrapper>
@@ -74,12 +78,12 @@ const Contact = () => {
                     <Border/>
                 </Heading>
                 <Description>{text}</Description>
-                <Button>Reach Out</Button>
+                <Button onClick={() => window.location.assign('mailto:njrockower@gmail.com')}>Reach Out</Button>
             </TextWrapper>
         </>;
     
     return (
-        <section className='page-section' name='contact'>
+        <section className='page-section' name='contact' style={{height: '90vh'}}>
                 <Wrapper>
                     <FadeWrapper contentToFade={content}/> 
                 </Wrapper>

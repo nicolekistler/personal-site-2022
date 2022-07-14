@@ -11,13 +11,11 @@ import { breakpoints } from '../../styles/breakpoints';
 
 const Wrapper = styled.div`
     display: flex;
-    flex-direction: column;
     padding: 0 30px 0 30px;
     align-items: center;
-    visibility: hidden;
 
     @media (min-width: ${breakpoints.l}px) {
-        visibility: visible;
+        flex-direction: column;
     }
 `;
 
@@ -32,20 +30,25 @@ const BottomBorder = styled.div`
 `;
 
 const Icon = styled.img`
-    margin: 10px 0 10px;
     height: 25px;
+    margin: 0 10px 0 10px;
+
+    @media (min-width: ${breakpoints.l}px) {
+        margin: 25px 0 25px 0;
+    }
 `;
 
 
-const Socials = () => {
+const Socials = ({ isMobile }) => {
+
     return (
         <Wrapper>
-            <Border/>
+            {!isMobile && <Border/>}
             <Icon src={linkedinIcon}/>
             <Icon src={githubIcon}/>
             <Icon src={codepenIcon}/>
             <Icon src={twitterIcon}/>
-            <BottomBorder/>
+            {!isMobile && <BottomBorder/>}
         </Wrapper>
     );
 };

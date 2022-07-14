@@ -77,15 +77,15 @@ Outside of work, my hobbies include cooking, spending time with my two dogs, try
 const About = () => {
     const content = 
         <>
-            <Heading name="heading">
-                <SectionTitle name="section-title">01. ABOUT ME</SectionTitle>
+            <Heading>
+                <SectionTitle>01. ABOUT ME</SectionTitle>
                 <Border/>
             </Heading>
-            <InnerWrapper name="inner-wrapper">
-                <BodyWrapper name="body-text">
+            <InnerWrapper>
+                <BodyWrapper>
                     <Description>{text}</Description>
                 </BodyWrapper>
-                <div><Portrait name="portrait"/></div>
+                <div><Portrait/></div>
                 
             </InnerWrapper>
         </>

@@ -136,15 +136,14 @@ const Experience = () => {
                 <SectionTitle>02. EXPERIENCE</SectionTitle>
                 <Border/>
             </Heading>
-            <Timeline name="timeline">
-                <TabWrapper name="tabwrapper">
+            <Timeline>
+                <TabWrapper>
                     <TabHighlight translateYValue={translateYValue}/>
                     <TabSelector>
                     {
                         timelineData.map((item, index) => {
                             return (
-                                <Tab 
-                                    name='Test'
+                                <Tab
                                     isActive={activeTabId === index}
                                     key={`tab-${index}`}
                                     onClick={() => { setActiveTab(index)}}
