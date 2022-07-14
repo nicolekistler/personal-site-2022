@@ -12,7 +12,6 @@ const Wrapper = styled.div`
     max-width: 80%;
     margin: auto;
     height: 60vh;
-    clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
 
     @media (min-width: ${breakpoints.m}px) {
         max-height: 90vh;
