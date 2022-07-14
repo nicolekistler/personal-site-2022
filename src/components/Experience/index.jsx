@@ -16,7 +16,7 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50%;
+    width: 100%;
     margin: auto 20px auto 20px;
 
     @media (min-width: ${breakpoints.m}px) {
@@ -27,13 +27,14 @@ const Wrapper = styled.div`
 
 const Heading = styled.div`
     display: flex;
-    align-items: center;
     margin-bottom: 1.2rem;
+    align-items: center;
 `;
 
 const Border = styled.div`
     margin-left: 10px;
     border-bottom: .05px solid ${colors.mediumGrey};
+    width: 50px;
 
     @media (min-width: ${breakpoints.m}px) {
         width: 350px;
@@ -42,50 +43,79 @@ const Border = styled.div`
 
 const Timeline = styled.div`
     display: flex;
-    height: 300px;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (min-width: ${breakpoints.m}px) {
+        flex-direction: row;
+    }
 `;
 
 const TabWrapper = styled.div`
     display: flex;
-    width: 100px;
-    height: 300px;
+    height: 100px;
+    justify-content: center;
+
+    @media (min-width: ${breakpoints.m}px) {
+        width: 100px;
+        height: 300px;
+        flex-direction: row;
+    }
 `;
 
 const TabSelector = styled.div`
     display: flex;
-    border-left: 2px solid ${colors.mediumGrey};
-    flex-direction: column;
-    width: 125px;
-    height: 280px;
+    height: 50px;
+
+    @media (min-width: ${breakpoints.m}px) {
+        border-left: 2px solid ${colors.mediumGrey};
+        flex-direction: column;
+        width: 125px;
+        height: 280px;
+    }
 `;
 
 const Tab = styled.div`
     display: flex;
     height: 70px;
-    width: 100px;
-    font-size: 1.2rem;
+    width: 70px;
     justify-content: center;
     align-items: center;
     text-align: center;
     cursor: pointer;
     color: ${({ isActive }) => isActive ? colors.black : colors.darkGrey};
+    font-size: .9rem;
     background-color: ${({ isActive }) => isActive && '#e3e3e3'};
+
+    @media (min-width: ${breakpoints.m}px) {
+        height: 70px;
+        width: 100px;
+        font-size: 1.2rem;
+    }
 `;
 
 const TabHighlight = styled.div`
-    border-left: 2px solid black;
-    transform: translate(2px, ${({ translateYValue }) => translateYValue}px);
+    border-top: 2px solid black;
     height: 70px;
     transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     transition-delay: 0.1s;
+
+    @media (min-width: ${breakpoints.m}px) {
+        border-left: 2px solid black;
+        transform: translate(2px, ${({ translateYValue }) => translateYValue}px);
+    }
 `;
 
 const PanelWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    margin: 10px 0 0 80px;
-    height: 300px;
-    width: 45vw;
+    margin: auto;
+    width: 280px;
+
+    @media (min-width: ${breakpoints.m}px) {
+        margin: 10px 0 0 80px;
+        width: 45vw;
+    }
 `;
 
 const Experience = () => {
@@ -101,8 +131,8 @@ const Experience = () => {
                 <SectionTitle>02. EXPERIENCE</SectionTitle>
                 <Border/>
             </Heading>
-            <Timeline>
-                <TabWrapper>
+            <Timeline name="timeline">
+                <TabWrapper name="tabwrapper">
                     <TabHighlight translateYValue={translateYValue}/>
                     <TabSelector>
                     {
@@ -144,7 +174,6 @@ const Experience = () => {
 
     return (
         <section className='page-section' name='experience'>
-            {/*  style={{backgroundColor: colors.offWhite}} */}
             <Wrapper>
                 <FadeWrapper contentToFade={content}/>
             </Wrapper>

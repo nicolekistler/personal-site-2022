@@ -66,10 +66,10 @@ export const SectionTitle = styled.h2`
     font-weight: 900;
     font-style: normal;
     white-space: nowrap; 
+    margin: 0;
 
     @media (min-width: ${breakpoints.m}px) {
         font-size: 1.7rem;
-        margin: 0;
     }
 `;
 
