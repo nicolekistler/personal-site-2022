@@ -13,7 +13,7 @@ export const Title = styled.h1`
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
 
-    @media (min-width: ${breakpoints.m}px) {
+    @media (min-width: ${breakpoints.l}px) {
         font-size: 5rem;
     }
 `;
@@ -26,7 +26,7 @@ export const Subtitle = styled.h2`
     font-weight: 900;
     font-style: normal;
 
-    @media (min-width: ${breakpoints.m}px) {
+    @media (min-width: ${breakpoints.l}px) {
         font-size: 2.5rem;
     }
 `;
@@ -40,7 +40,7 @@ export const Link = styled.a`
     text-decoration: underline;
     margin: 0 15px 40px 0;
 
-    @media (min-width: ${breakpoints.m}px) {
+    @media (min-width: ${breakpoints.l}px) {
         font-size: 1.6rem;
     }
 `;
@@ -53,7 +53,7 @@ export const LinkDescription = styled.p`
     color: ${colors.darkGrey};
     margin: 0 0 40px 0;
 
-    @media (min-width: ${breakpoints.m}px) {
+    @media (min-width: ${breakpoints.l}px) {
         font-size: 1.3rem;
     }
 `;
@@ -68,7 +68,7 @@ export const SectionTitle = styled.h2`
     white-space: nowrap; 
     margin: 0;
 
-    @media (min-width: ${breakpoints.m}px) {
+    @media (min-width: ${breakpoints.l}px) {
         font-size: 1.7rem;
     }
 `;
@@ -82,7 +82,7 @@ export const Description = styled.div`
     text-justify: inter-word;
     color: ${colors.darkGrey};
 
-    @media (min-width: ${breakpoints.m}px) {
+    @media (min-width: ${breakpoints.l}px) {
         font-size: 1.25rem;
     }
 `;
@@ -95,7 +95,7 @@ export const TitleSmall = styled.div`
     color: ${colors.darkGrey};
     white-space: nowrap; 
 
-    @media (min-width: ${breakpoints.m}px) {
+    @media (min-width: ${breakpoints.l}px) {
         font-size: 1.4rem;
     }
 `;
@@ -108,7 +108,7 @@ export const SubtitleSmall = styled.div`
     color: ${colors.darkGrey};
     white-space: nowrap; 
 
-    @media (min-width: ${breakpoints.m}px) {
+    @media (min-width: ${breakpoints.l}px) {
         font-size: 1.4rem;
     }
 `;
@@ -121,7 +121,7 @@ export const Range = styled.div`
     font-style: normal;
     color: ${colors.black};
 
-    @media (min-width: ${breakpoints.m}px) {
+    @media (min-width: ${breakpoints.l}px) {
         font-size: 1.2rem;
     }
 `;
@@ -137,7 +137,7 @@ export const DescriptionSmall = styled.div`
     text-justify: inter-word;
     color: ${colors.black};
 
-    @media (min-width: ${breakpoints.m}px) {
+    @media (min-width: ${breakpoints.l}px) {
         font-size: 1.2rem;
     }
 `;

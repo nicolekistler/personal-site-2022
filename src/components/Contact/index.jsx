@@ -19,7 +19,7 @@ const TextWrapper = styled.div`
     width: 60%;
     margin: auto;
 
-    @media (min-width: ${breakpoints.m}px) {
+    @media (min-width: ${breakpoints.l}px) {
         width: 40%;
     }
 `;
@@ -36,7 +36,7 @@ const Button = styled.div`
     color: white;
     margin-top: 2rem;
 
-    @media (min-width: ${breakpoints.m}px) {
+    @media (min-width: ${breakpoints.l}px) {
         font-size: 1.6rem;
         padding: 15px 25px 15px 25px;
     }
@@ -54,7 +54,7 @@ const Border = styled.div`
     margin: 0 10px 0 10px;
     width: 50px;
 
-    @media (min-width: ${breakpoints.m}px) {
+    @media (min-width: ${breakpoints.l}px) {
         width: 200px;
     }
 `;

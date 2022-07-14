@@ -41,7 +41,7 @@ function App() {
     background-color: ${colors.offWhite};
     clip-path: polygon(0 14%, 100% 8%, 100% 84%, 0 80%);
 
-    @media (min-width: ${breakpoints.m}px) {
+    @media (min-width: ${breakpoints.l}px) {
       transform: translateY(170vh);
       height: 170vh;
     }

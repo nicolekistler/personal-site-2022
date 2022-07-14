@@ -13,7 +13,7 @@ const Wrapper = styled.div`
     margin: auto;
     height: 60vh;
 
-    @media (min-width: ${breakpoints.m}px) {
+    @media (min-width: ${breakpoints.l}px) {
         max-height: 90vh;
     }
 `;
@@ -37,7 +37,7 @@ const InnerWrapper = styled.div`
     height: inherit;
     overflow-y: auto;
 
-    @media (min-width: ${breakpoints.m}px) {
+    @media (min-width: ${breakpoints.l}px) {
         flex-direction: row;
     }
 
@@ -45,7 +45,7 @@ const InnerWrapper = styled.div`
 
 const BodyWrapper = styled.div`
 
-    @media (min-width: ${breakpoints.m}px) {
+    @media (min-width: ${breakpoints.l}px) {
         margin-right: 30px;
         max-width: 500px;
     }
@@ -59,7 +59,7 @@ const Portrait = styled.div`
     margin-top: 20px;
     margin-bottom: 15px;
 
-    @media (min-width: ${breakpoints.m}px) {
+    @media (min-width: ${breakpoints.l}px) {
         height: 325px;
         width: 325px;
         margin: 0;

@@ -19,7 +19,7 @@ const Wrapper = styled.div`
     width: 100%;
     margin: auto 20px auto 20px;
 
-    @media (min-width: ${breakpoints.m}px) {
+    @media (min-width: ${breakpoints.l}px) {
         width: auto;
         margin: auto;
     }
@@ -29,6 +29,11 @@ const Heading = styled.div`
     display: flex;
     margin-bottom: 1.2rem;
     align-items: center;
+    justify-content: center;
+
+    @media (min-width: ${breakpoints.l}px) {
+        justify-content: flex-start;
+    }
 `;
 
 const Border = styled.div`
@@ -36,7 +41,7 @@ const Border = styled.div`
     border-bottom: .05px solid ${colors.mediumGrey};
     width: 50px;
 
-    @media (min-width: ${breakpoints.m}px) {
+    @media (min-width: ${breakpoints.l}px) {
         width: 350px;
     }
 `;
@@ -46,7 +51,7 @@ const Timeline = styled.div`
     flex-direction: column;
     justify-content: center;
 
-    @media (min-width: ${breakpoints.m}px) {
+    @media (min-width: ${breakpoints.l}px) {
         flex-direction: row;
     }
 `;
@@ -56,7 +61,7 @@ const TabWrapper = styled.div`
     height: 100px;
     justify-content: center;
 
-    @media (min-width: ${breakpoints.m}px) {
+    @media (min-width: ${breakpoints.l}px) {
         width: 100px;
         height: 300px;
         flex-direction: row;
@@ -67,7 +72,7 @@ const TabSelector = styled.div`
     display: flex;
     height: 50px;
 
-    @media (min-width: ${breakpoints.m}px) {
+    @media (min-width: ${breakpoints.l}px) {
         border-left: 2px solid ${colors.mediumGrey};
         flex-direction: column;
         width: 125px;
@@ -87,7 +92,7 @@ const Tab = styled.div`
     font-size: .9rem;
     background-color: ${({ isActive }) => isActive && '#e3e3e3'};
 
-    @media (min-width: ${breakpoints.m}px) {
+    @media (min-width: ${breakpoints.l}px) {
         height: 70px;
         width: 100px;
         font-size: 1.2rem;
@@ -100,7 +105,7 @@ const TabHighlight = styled.div`
     transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     transition-delay: 0.1s;
 
-    @media (min-width: ${breakpoints.m}px) {
+    @media (min-width: ${breakpoints.l}px) {
         border-left: 2px solid black;
         transform: translate(2px, ${({ translateYValue }) => translateYValue}px);
     }
@@ -112,7 +117,7 @@ const PanelWrapper = styled.div`
     margin: auto;
     width: 280px;
 
-    @media (min-width: ${breakpoints.m}px) {
+    @media (min-width: ${breakpoints.l}px) {
         margin: 10px 0 0 80px;
         width: 45vw;
     }

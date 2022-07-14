@@ -16,7 +16,7 @@ const Wrapper = styled.div`
     align-items: center;
     visibility: hidden;
 
-    @media (min-width: ${breakpoints.m}px) {
+    @media (min-width: ${breakpoints.l}px) {
         visibility: visible;
     }
 `;
