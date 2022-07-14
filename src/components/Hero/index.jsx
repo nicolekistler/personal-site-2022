@@ -9,7 +9,6 @@ import Socials from '../Socials';
 
 const Wrapper = styled.section`
     display: flex;
-    // background-color: ${colors.matchaFoam};
     animation: fadeInAnimation ease 1.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
