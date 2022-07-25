@@ -33,12 +33,12 @@ const Border = styled.div`
 const InnerWrapper = styled.div`
     word-wrap: break-word;
     display: flex;
-    flex-direction: column-reverse;
-    height: inherit;
+    height: 400px;
     overflow-y: auto;
 
     @media (min-width: ${breakpoints.l}px) {
         flex-direction: row;
+        height: 500px;
     }
 
 `;
@@ -46,23 +46,7 @@ const InnerWrapper = styled.div`
 const BodyWrapper = styled.div`
 
     @media (min-width: ${breakpoints.l}px) {
-        margin-right: 30px;
-        max-width: 500px;
-    }
-`;
-
-const Portrait = styled.div`
-    display: block;
-    border: 1px solid black;
-    height: 200px;
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 15px;
-
-    @media (min-width: ${breakpoints.l}px) {
-        height: 325px;
-        width: 325px;
-        margin: 0;
+        width: 600px;
     }
 `;
 
@@ -85,8 +69,6 @@ const About = () => {
                 <BodyWrapper>
                     <Description>{text}</Description>
                 </BodyWrapper>
-                <div><Portrait/></div>
-                
             </InnerWrapper>
         </>
 

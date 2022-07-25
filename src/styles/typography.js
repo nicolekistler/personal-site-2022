@@ -74,7 +74,7 @@ export const SectionTitle = styled.h2`
 `;
 
 export const Description = styled.div`
-    font-size: .9rem;
+    font-size: 1rem;
     font-family: halyard-text, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -88,7 +88,7 @@ export const Description = styled.div`
 `;
 
 export const TitleSmall = styled.div`
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 10px;
     font-family: dapifer, serif;
     font-weight: 400;
@@ -100,7 +100,7 @@ export const TitleSmall = styled.div`
     }
 `;
 export const SubtitleSmall = styled.div`
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 10px;
     margin-left: 5px;
     font-family: dapifer, serif;
@@ -132,10 +132,9 @@ export const DescriptionSmall = styled.div`
     margin: 20px 0 20px 0;
     font-family: halyard-text, sans-serif;
     font-weight: 400;
-    font-style: normal;
     text-align: justify;
     text-justify: inter-word;
-    color: ${colors.black};
+    color: ${colors.darkGrey};
 
     @media (min-width: ${breakpoints.l}px) {
         font-size: 1.2rem;

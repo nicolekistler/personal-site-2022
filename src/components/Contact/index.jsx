@@ -4,13 +4,13 @@ import { Description, SectionTitle } from '../../styles/typography';
 import { breakpoints } from '../../styles/breakpoints';
 import { colors } from '../../styles/colors';
 import FadeWrapper from '../FadeWrapper';
-import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 const Wrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 10vh;
 `;
 
 const TextWrapper = styled.div`
@@ -18,7 +18,7 @@ const TextWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 60%;
+    width: 70%;
     margin: auto;
 
     @media (min-width: ${breakpoints.l}px) {
@@ -67,7 +67,6 @@ In addition to reaching out about roles, feel free to get in touch about mentors
 `;
 
 const Contact = () => {
-    const { width } = useWindowDimensions();
 
     const content = 
         <>

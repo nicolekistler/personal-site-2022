@@ -18,6 +18,7 @@ const Wrapper = styled.div`
     justify-content: center;
     width: 100%;
     margin: auto 20px auto 20px;
+    height: 500px;
 
     @media (min-width: ${breakpoints.l}px) {
         width: auto;
@@ -82,7 +83,7 @@ const TabSelector = styled.div`
 
 const Tab = styled.div`
     display: flex;
-    height: 70px;
+    height: 72px;
     width: 70px;
     justify-content: center;
     align-items: center;
@@ -100,7 +101,6 @@ const Tab = styled.div`
 `;
 
 const TabHighlight = styled.div`
-    border-top: 2px solid black;
     height: 70px;
     transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     transition-delay: 0.1s;
@@ -119,7 +119,7 @@ const PanelWrapper = styled.div`
 
     @media (min-width: ${breakpoints.l}px) {
         margin: 10px 0 0 80px;
-        width: 45vw;
+        width: 40vw;
     }
 `;
 
@@ -161,7 +161,7 @@ const Experience = () => {
                         <SubtitleSmall>{experienceToRender.panelSubtitle}</SubtitleSmall>
                     </div>
                     <Range>{experienceToRender.range}</Range>
-                    <div>
+                    <div style={{height: '500px'}}>
                         {
                             experienceToRender.descriptions.map((item, index) => {
                                 return (
