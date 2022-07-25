@@ -2,10 +2,10 @@ import React, { memo } from 'react';
 import styled from 'styled-components';
 import { colors } from '../../styles/colors';
 import { 
+    bookIcon,
     codepenIcon,
     githubIcon,
-    linkedinIcon,
-    twitterIcon
+    linkedinIcon
 } from '../../assets/icons';
 import { breakpoints } from '../../styles/breakpoints';
 
@@ -44,10 +44,12 @@ const Socials = ({ isMobile }) => {
     return (
         <Wrapper>
             {!isMobile && <Border/>}
-            <Icon src={linkedinIcon}/>
-            <Icon src={githubIcon}/>
-            <Icon src={codepenIcon}/>
-            <Icon src={twitterIcon}/>
+            <a href='https://www.linkedin.com/in/nrockower/'><Icon src={linkedinIcon}/></a>
+            <a href='https://github.com/nrckwr'><Icon src={githubIcon}/></a>
+            <a href='https://www.goodreads.com/user/show/148638856-nicole-rockower'>
+                <Icon src={bookIcon}/>
+            </a>
+            <a href='https://codepen.io/nrckwr'><Icon src={codepenIcon}/></a>
             {!isMobile && <BottomBorder/>}
         </Wrapper>
     );
