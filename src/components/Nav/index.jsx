@@ -21,21 +21,21 @@ const Nav = () => {
 
     return (
         <div>
-            <Item>
+            <Item onClick={() => { scrollTo('about') }}>
                 <Link>INTRO</Link>
-                <LinkDescription onClick={() => { scrollTo('about') }}>
+                <LinkDescription>
                     01. Get to know me
                 </LinkDescription>
             </Item>
-            <Item>
+            <Item onClick={() => { scrollTo('experience') }}>
                 <Link>EXPERIENCE</Link>
-                <LinkDescription onClick={() => { scrollTo('experience') }}>
+                <LinkDescription>
                     02. Stuff I've done
                 </LinkDescription>
             </Item>
-            <Item>
+            <Item onClick={() => { scrollTo('contact') }}>
                 <Link>CONTACT</Link>
-                <LinkDescription onClick={() => { scrollTo('contact') }}>
+                <LinkDescription>
                     03. Get in touch
                 </LinkDescription>
             </Item>
