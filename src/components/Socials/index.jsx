@@ -44,8 +44,8 @@ const Socials = ({ isMobile }) => {
     return (
         <Wrapper>
             {!isMobile && <Border/>}
-            <a href='https://www.linkedin.com/in/nrockower/'><Icon src={linkedinIcon}/></a>
-            <a href='https://github.com/nrckwr'><Icon src={githubIcon}/></a>
+            <a href='https://www.linkedin.com/in/nicolejkistler/'><Icon src={linkedinIcon}/></a>
+            <a href='https://github.com/nicolekistler'><Icon src={githubIcon}/></a>
             <a href='https://www.goodreads.com/user/show/148638856-nicole-rockower'>
                 <Icon src={bookIcon}/>
             </a>

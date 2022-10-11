@@ -123,6 +123,15 @@ const PanelWrapper = styled.div`
     }
 `;
 
+const DescriptionContainer = styled.div`
+    height: 400px;
+    overflow-y: scroll;
+
+    @media (min-width: ${breakpoints.l}px) {
+        height: 500px;
+    }
+`;
+
 const Experience = () => {
     const [activeTabId, setActiveTab] = useState(0);
 
@@ -161,7 +170,7 @@ const Experience = () => {
                         <SubtitleSmall>{experienceToRender.panelSubtitle}</SubtitleSmall>
                     </div>
                     <Range>{experienceToRender.range}</Range>
-                    <div style={{height: '500px'}}>
+                    <DescriptionContainer>
                         {
                             experienceToRender.descriptions.map((item, index) => {
                                 return (
@@ -171,7 +180,7 @@ const Experience = () => {
                                 );
                             })
                         }
-                    </div>
+                    </DescriptionContainer>
                 </PanelWrapper>
             </Timeline>
         </>;

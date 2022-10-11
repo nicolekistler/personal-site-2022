@@ -37,6 +37,7 @@ const Button = styled.div`
     font-size: 1.2rem;
     color: white;
     margin-top: 2rem;
+    cursor: pointer;
 
     @media (min-width: ${breakpoints.l}px) {
         font-size: 1.6rem;
@@ -77,7 +78,7 @@ const Contact = () => {
                     <Border/>
                 </Heading>
                 <Description>{text}</Description>
-                <Button onClick={() => window.location.assign('mailto:njrockower@gmail.com')}>Reach Out</Button>
+                <Button onClick={() => window.location.assign('mailto:me@nicolekistler.dev')}>Reach Out</Button>
             </TextWrapper>
         </>;
     
