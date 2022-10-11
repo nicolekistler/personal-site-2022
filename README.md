@@ -1,1 +1,1 @@
-Add something here later
+Hi! I'm Nicole, and this repo is my personal portfolio site. Written in React and JavaScript, feel free to fork it if you'd like to create something similar to mine. Currently under construction, and will periodically improve the project as time permits!
