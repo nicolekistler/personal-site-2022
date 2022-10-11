@@ -1,1 +1,3 @@
-Hi! I'm Nicole, and this repo is for my personal site. Written in React and JavaScript, feel free to fork it if you'd like to create something similar to mine. Currently under construction, and will periodically improve the project as time permits!
+## Hi 👋 I'm Nicole, and this repo is for my personal site.
+
+This codebase is written primarily in JavaScript, utilizing React and styled-components. The live version of my site may be viewed [here](https://nicolekistler.dev)--feel free to fork the repo if you'd like to create something similar to mine. Currently under construction, I'll occassionally improve this code whenever time permits.
