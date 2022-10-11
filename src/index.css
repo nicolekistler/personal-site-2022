@@ -36,3 +36,8 @@ body {
   transform: none;
   visibility: visible;
 }
+
+.description-container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}

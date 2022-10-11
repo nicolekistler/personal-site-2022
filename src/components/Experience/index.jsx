@@ -126,6 +126,7 @@ const PanelWrapper = styled.div`
 const DescriptionContainer = styled.div`
     height: 400px;
     overflow-y: scroll;
+    scrollbar-width: none;
 
     @media (min-width: ${breakpoints.l}px) {
         height: 500px;
@@ -170,7 +171,7 @@ const Experience = () => {
                         <SubtitleSmall>{experienceToRender.panelSubtitle}</SubtitleSmall>
                     </div>
                     <Range>{experienceToRender.range}</Range>
-                    <DescriptionContainer>
+                    <DescriptionContainer className='description-container'>
                         {
                             experienceToRender.descriptions.map((item, index) => {
                                 return (
