@@ -44,12 +44,12 @@ const Socials = ({ isMobile }) => {
     return (
         <Wrapper>
             {!isMobile && <Border/>}
-            <a href='https://www.linkedin.com/in/nicolejkistler/'><Icon src={linkedinIcon}/></a>
-            <a href='https://github.com/nicolekistler'><Icon src={githubIcon}/></a>
+            <a href='https://www.linkedin.com/in/nicolejkistler/'><Icon alt='linked in logo' src={linkedinIcon}/></a>
+            <a href='https://github.com/nicolekistler'><Icon alt='git hub logo' src={githubIcon}/></a>
             <a href='https://www.goodreads.com/user/show/148638856-nicole-rockower'>
-                <Icon src={bookIcon}/>
+                <Icon alt='good reads logo' src={bookIcon}/>
             </a>
-            <a href='https://codepen.io/nrckwr'><Icon src={codepenIcon}/></a>
+            <a href='https://codepen.io/nrckwr'><Icon alt='code pen logo' src={codepenIcon}/></a>
             {!isMobile && <BottomBorder/>}
         </Wrapper>
     );
