@@ -44,13 +44,14 @@ const InnerWrapper = styled.div`
 `;
 
 const BodyWrapper = styled.div`
-
+    margin-right: 30px;
     @media (min-width: ${breakpoints.l}px) {
+        margin-right: 0px;
         width: 600px;
     }
 `;
 
-const text = `Based out of Brooklyn, I'm a Software Engineer with six years of experience building applications for the Web.
+const text = `Based out of Brooklyn, I'm a Software Engineer with six years of experience building applications for the web.
 I've worked on everything from small projects at startups to global products with hundreds of millions of subscribers.
 Furthermore, I have a wide breadth of knowledge throughout the stack, although lately, I've mainly focused on writing frontend.
 For the past two years, I've worked for the Walt Disney Company, where I bring new and exciting features to life on our streaming platform, Disney+.
